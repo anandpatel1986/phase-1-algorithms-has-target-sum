@@ -1,13 +1,30 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+
+  for(let i=0; i<array.length-1; i++){
+
+    for(let j=i+1; j<array.length; j++){
+      
+      if((array[i]+array[j]) === target) return true      
+
+    }
+
+  }
+
+  return false
 }
 
 /* 
   Write the Big O time complexity of your function here
+  O(n2)
 */
 
 /* 
   Add your pseudocode here
+  1. We need to iterate over arrays mean we need to use nested loops
+  2. First iteration will use i counter and it will iterate till array length
+  3. In second iteration use j counter which will be i+1 and increament till array length
+  4. check condition and return true if true , array[i]+array[j] === target
 */
 
 /*
